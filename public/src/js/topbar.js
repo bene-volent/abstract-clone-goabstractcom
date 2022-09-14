@@ -44,3 +44,10 @@ menuButton.onclick = menuClickHandler
 matchMenuIcon();
 matchTopBarColor();
 
+
+const searchButton = document.querySelector(".topbar-inner__small-search")
+const searchBar = document.querySelector(".topbar__search-bar")
+const searchClose = document.querySelector(".topbar__search-close")
+
+searchButton.addEventListener('click',function(){searchBar.classList.remove('closed')})
+searchClose.addEventListener('click',function(){searchBar.classList.add('closed')})

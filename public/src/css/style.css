@@ -55,6 +55,7 @@ table {
     --padding:2em;
 }
 body{
+    background-color: gray;
     font-family: 'Didact Gothic', sans-serif;
 }
 .only-desktop{
@@ -114,7 +115,52 @@ body{
     color:#FFF;
     margin-left: 7.5px;
 }
+.topbar__search-bar.closed{
+    display: none;
+}
+.topbar__search-bar{
+    position:absolute;
+    top:0;
+    left:calc( -1 * max(var(--padding),calc(50vw - var(--max-width) / 2)));
+    width:100vw;
+    height: 100%;
+    background-color: #fff;
+}
+.topbar__searchbar-wrapper{
 
+    height: 100%;
+    display: flex;
+    /* grid-template-columns: 80% auto; */
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    /* justify-content: ; */
+    margin-left: max(var(--padding) * 1.5,calc( 50% - var(--max-width) / 2));
+    flex-grow: 1;
+}
+
+.topbar__searchbar-input{
+    width: 82%;
+    height:60%;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    /* margin: auto; */
+    border-radius: 5px;
+    border:1px solid black
+}
+.topbar__search-close{
+    cursor: pointer;
+    background: none;
+    height: 40%;
+    aspect-ratio: 1 / 1 ;
+    padding: 0 1.3rem;
+    border: none;
+}
+.topbar__search-close:hover{
+    scale: 1.2;
+    transition: all 200ms linear;
+}
 .btn{
     text-decoration: none;
     color: #FFF;
@@ -155,7 +201,7 @@ body{
         background-color: #191a1b;
         padding-block: 1.5rem;
 
-        left:calc(-1 * max(var(--padding),calc(50% - var(--max-width) / 2)));
+        left:calc(-1 * max(var(--padding),calc(50vw - var(--max-width) / 2)));
     }
     .topbar-control-container.opened .topbar-inner__buttons{
         display: flex;
@@ -190,6 +236,7 @@ body{
     display: flex;
 }
 .topbar-inner__small>button{
+    cursor: pointer;
     background:none;
     color: #fff;
     padding: 0.5rem;
@@ -224,14 +271,14 @@ body{
 }
 
 .container{
-    padding-left: max(var(--padding),calc(50% - var(--max-width) / 2));
-    padding-right: max(var(--padding),calc(50% - var(--max-width) / 2));
+    padding-left: max(var(--padding),calc(50vw - var(--max-width) / 2));
+    padding-right: max(var(--padding),calc(50vw - var(--max-width) / 2));
 }
 
 @media (max-width:768px) {
     .container{
         --padding:1em;
-        padding-left: max(var(--padding),calc(50% - var(--max-width) / 2));
-        padding-right: max(var(--padding),calc(50% - var(--max-width) / 2));
+        padding-left: max(var(--padding),calc(50vw - var(--max-width) / 2));
+        padding-right: max(var(--padding),calc(50vw - var(--max-width) / 2));
     }
 }

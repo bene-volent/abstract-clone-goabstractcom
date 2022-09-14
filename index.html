@@ -82,6 +82,14 @@
                         >
                     </div>
                 </div>
+                
+                <div class="topbar-inner__small">
+                    <button class="topbar-inner__small-search">
+                        <span class="fa fa-search"></span></button
+                    ><button class="topbar-inner__small-bars">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                </div>
                 <div class="topbar-control-container closed">
                     <div class="topbar-inner__buttons">
                         <a
@@ -96,16 +104,19 @@
                         >
                     </div>
                 </div>
-                
-                <div class="topbar-inner__small">
-                    <button class="topbar-inner__small-search">
-                        <span class="fa fa-search"></span></button
-                    ><button class="topbar-inner__small-bars">
-                        <span class="fa fa-bars"></span>
-                    </button>
+                <div class="topbar__search-bar closed">
+                    <div class="topbar__searchbar-wrapper">
+                        <form role="search" class="search-bar" action="https://help.abstract.com/hc/en-us/search" style="height:100%;" enctype="text/plain">
+                            <input type="hidden" name="utf8" value="✓">
+                            <input name='query' id="query" class="topbar__searchbar-input" placeholder="Search"  type="text">
+                            <input type="submit" style="display: none;">
+                            <button class="topbar__search-close" type="button">
+                                <span class="fa fa-close"></span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            
         </header>
         <script src="public/src/js/topbar.js"></script>
     </body>
