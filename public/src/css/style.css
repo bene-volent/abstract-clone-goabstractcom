@@ -69,12 +69,12 @@ body{
     font-size: 1.6em;
     max-width:var(--max-width);
 }
-/* @media (max-width:1200px) {
+@media (max-width:768px) {
     .topbar{
         font-size: 1.3em;
     }
 } 
-*/
+
  
 
 .topbar-inner{
@@ -90,7 +90,11 @@ body{
     width: 8rem;
     display: flex;
     align-items: center;
+    padding-right: 7.5px;
+    border-right: 2px solid white;
+
 }
+
 .abstract-logo.logo{
     transition: all 0ms linear;
 
@@ -108,13 +112,9 @@ body{
 .topbar-logo__hc{
     text-decoration: none;
     color:#FFF;
-    margin-left: 5px;
+    margin-left: 7.5px;
 }
-.topbar-logo__hc::before{
-    content: " \2758 ";
-    padding-right: 5px;
 
-}
 .btn{
     text-decoration: none;
     color: #FFF;
@@ -184,8 +184,11 @@ body{
     }
     
 }
-   
+ 
 
+.topbar-inner__small{
+    display: flex;
+}
 .topbar-inner__small>button{
     background:none;
     color: #fff;
@@ -223,4 +226,12 @@ body{
 .container{
     padding-left: max(var(--padding),calc(50% - var(--max-width) / 2));
     padding-right: max(var(--padding),calc(50% - var(--max-width) / 2));
+}
+
+@media (max-width:768px) {
+    .container{
+        --padding:1em;
+        padding-left: max(var(--padding),calc(50% - var(--max-width) / 2));
+        padding-right: max(var(--padding),calc(50% - var(--max-width) / 2));
+    }
 }
